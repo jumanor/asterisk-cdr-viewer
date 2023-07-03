@@ -4,7 +4,7 @@ This application is a simple and fast viewer for Asterisk CDRs / recordings.
 It's a fork of the original [asterisk-cdr-viewer](https://github.com/g613/asterisk-cdr-viewer) with some adaptations:
 
 * Supports HTML5 (Audio Native)
-* Tested only with [Issabel PBX](https://www.issabel.org/) (version 4) 
+* Tested with [Issabel](https://www.issabel.org/) and [FreePbx](https://www.freepbx.org/) 
 
 ## Example
 
