@@ -139,6 +139,7 @@ function formatFiles($row) {
 		uniqueid.wav 
 	*/
 	$recorded_file = $row['uniqueid'];
+	$path_recorded_file=$row['recordingfile']; //Only Issabel PBX
 	/* ============================================================================ */	
 
 	if (file_exists("$system_monitor_dir/$recorded_file.$system_audio_format")) {
@@ -149,7 +150,10 @@ function formatFiles($row) {
 		echo "    <td class=\"record_col\"><a href=\"download.php?fax=$recorded_file.tif\" title=\"View FAX image\"><img src=\"templates/images/text.png\" alt=\"FAX image\" /></a></td>\n";
 	} elseif (file_exists("$system_monitor_dir/$recorded_file")) {
 		echo "    <td class=\"record_col\"><a href=\"download.php?audio=$recorded_file\" title=\"Listen to call recording\"><img src=\"templates/images/sound.png\" alt=\"Call recording\" /></a></td>\n";
-	} else {
+	} elseif (file_exists("$path_recorded_file")) {
+		echo "    <td class=\"record_col\"><img onclick=\"clickImageAudio(this,'".$path_recorded_file."')\" src=\"templates/images/sound.png\" alt=\"Call recording\" /></td>\n";
+	}
+	else {
 		echo "    <td class=\"record_col\"></td>\n";
 	}
 }

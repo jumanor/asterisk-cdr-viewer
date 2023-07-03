@@ -4,6 +4,24 @@
 	<link rel="stylesheet" href="style/screen.css" type="text/css" media="screen" />
 	<link rel="shortcut icon" href="templates/images/favicon.ico" />
 	<script language='JavaScript'>
+		
+		function clickImageAudio(e,path_recorded_file){
+			var aux=e.parentNode.parentNode.nextElementSibling;
+			aux=aux.children[0].children[0];
+			aux.style.display="";//mostramos el div de audio
+			if(aux.children[0]!=null){//solo un reproductor
+				return;
+			}
+
+			var audio = document.createElement("audio")
+			audio.src="downloadaudio.php?audio="+path_recorded_file;
+			audio.controls="controls";
+			audio.autoplay="autoplay";
+			audio.style.width="100%";
+			audio.style.height="25px";
+			aux.appendChild(audio);
+		}
+
 		function NewDate( cur_date ) {
 			var curr = new Date; // get current date
 			var first;

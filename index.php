@@ -421,6 +421,7 @@ if ( isset($_REQUEST['need_html']) && $_REQUEST['need_html'] == 'true' ) {
 				formatAccountCode($row['accountcode']);
 			}
 			echo "  </tr>\n";
+			echo "<tr><td colspan='12'><div style='display:none;'></div></td></tr>";
 		}
 		}
 		catch (PDOException $e) {
