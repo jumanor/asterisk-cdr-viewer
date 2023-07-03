@@ -139,7 +139,26 @@ function formatFiles($row) {
 		uniqueid.wav 
 	*/
 	$recorded_file = $row['uniqueid'];
-	$path_recorded_file=$row['recordingfile']; //Only Issabel PBX
+	//field added by Issabel and FreePbx
+	$path_recorded_file=$row['recordingfile'];
+	if($path_recorded_file!=""){
+		//	recordingfile into freepbx PBX
+		//	in-052241710-952662636-20230701-112836-1688228915.14.wav
+		//
+		// 	recordingfile into issabel PBX
+		// 	/var/spool/asterisk/monitor/in-052241710-952662636-20230701-112836-1688228915.14.wav
+		$tmp=explode($system_monitor_dir,$path_recorded_file);
+	
+		if(count($tmp)==1){//freepbx
+			$p=explode("-",$path_recorded_file);
+			$anio=substr($p[3],0,4);
+			$mes=substr($p[3],4,2);
+			$dia=substr($p[3],6,2);
+			$path_recorded_file="$system_monitor_dir/$anio/$mes/$dia/$path_recorded_file";
+		}
+		else{//issabel
+		}		
+	}
 	/* ============================================================================ */	
 
 	if (file_exists("$system_monitor_dir/$recorded_file.$system_audio_format")) {
