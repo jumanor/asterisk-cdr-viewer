@@ -1,4 +1,16 @@
-Simple and fast viewer for asterisk CDRs / recordings. ( 1.0.14, Oct 7 2017 )
+# Asterisk CDR viewer
+
+This application is a simple and fast viewer for Asterisk CDRs / recordings. 
+It's a fork of the original [asterisk-cdr-viewer](https://github.com/g613/asterisk-cdr-viewer) with some adaptations:
+
+* Supports HTML5 (Audio Native)
+* Tested only with [Issabel PBX](https://www.issabel.org/) (version 4) 
+
+## Example
+
+![](img/image10.gif)
+
+## Key features
 
     Asterisk regexp support ( like _XNZ. ) for source / destination / DID numbers. 
 
@@ -13,6 +25,8 @@ Simple and fast viewer for asterisk CDRs / recordings. ( 1.0.14, Oct 7 2017 )
     Plugins support for custom reports. 
 
     ASR report 
+
+## Screenshots
 
 ![Html results](img/image6.png "html results")
 
