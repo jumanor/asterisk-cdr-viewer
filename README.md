@@ -6,6 +6,10 @@ It's a fork of the original [asterisk-cdr-viewer](https://github.com/g613/asteri
 * Supports HTML5 (Audio Native)
 * Tested with [Issabel](https://www.issabel.org/) and [FreePbx](https://www.freepbx.org/) 
 
+## Installation
+
+Installation in the following [link](https://www.youtube.com/watch?v=ePOW4Ic2-oU)
+
 ## Example
 
 ![](img/image10.gif)
